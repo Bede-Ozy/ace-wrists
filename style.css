@@ -1,0 +1,501 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.palette1{
+    --primary-color:#1C2D4A;
+    --secondary-color:#f7f3ed;
+    --accent-color:#A67B5B;
+    --main-font:"Manrope", sans-serif;
+    --secondary-color-shade1:#c9c9c9;
+}
+.palette2{
+    --primary-color:#1C4532;
+    --secondary-color:#F4EDE5;
+    --accent-color:#D4AF37;
+    --secondary-color-shade1:#d1c6b93b;
+
+}
+
+.b1, .b2{
+    width:20px;
+    height:20px;   
+}
+
+.b2{
+    position:relative;
+    left:10px;
+    top:10px;
+    background-color: var(--primary-color);
+}
+
+.b2::before{
+    position:absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;
+    left:100%;
+    background-color: var(--secondary-color);
+}
+.b2::after{
+    position:absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;
+    left:200%;
+    background-color: var(--accent-color);
+}
+
+.b4{
+    position:relative;
+    background-color: var(--primary-color);
+    top:0px;
+    left:350px;
+}
+
+.b4::before{
+    position:absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    top:100%;
+    left:0;
+    background-color:var(--secondary-color);
+}
+.b4::after{
+     position:absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    top:200%;
+    left:0;
+    background-color: var(--accent-color);
+}
+
+
+body{
+    background-color: var(--secondary-color);
+    font-family: var(--main-font);
+}
+
+main{
+    width:100%;
+}
+
+/* ======================================================== HEADER SECTION */
+header{
+    width:100%;
+    height:100px;
+    /* background-color: red; */
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .logo{
+    width:200px;
+    height:50px;
+    
+
+    display:flex; 
+    justify-content: start;
+    align-items: center;
+    
+}
+
+.logo a{
+    font-weight:bold;
+    text-decoration: none;
+    color:var(--primary-color);
+}
+.logo a span{
+    color:var(--accent-color);
+    font-weight: lighter;
+}
+
+header nav ul{
+    height:50px;
+    /* background-color: green; */
+    list-style-type: none;
+
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nav-link{
+    position:relative;
+    padding:10px 15px;
+    /* background-color: yellow; */
+    text-decoration: none;
+    color:var(--primary-color);
+    transition:all 0.3s ease-in-out;
+}
+
+header nav .nav-link::before{
+    position:absolute;
+    content:'';
+    bottom:0;
+    left:50%;
+    height:1px;
+    width:0px;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+}
+/* 
+header nav .nav-link:hover{
+    border-bottom:1px solid var(--primary-color);
+} */
+header nav .nav-link:hover::before{
+    width:100%;
+    left:0;
+}
+
+header .nav-actions{
+    height:100%;
+    /* background-color: red; */
+    display: flex;
+    gap:20px;
+    justify-content: end;
+    align-items: center;
+}
+
+header .nav-actions .subscribe-btn{
+    /* width:100px; */
+    height : 30px;
+    padding:5px 10px;
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+    border-radius:10px;
+    border:none;
+    cursor:pointer;
+    transition: all 0.2s ease-in;
+}
+
+header .nav-actions .subscribe-btn:hover{
+    background-color: var(--accent-color);
+}
+
+header .nav-actions input{
+    position:relative;
+    width:200px;
+    height:30px;
+    outline:0;
+    border:none;
+    border-radius:10px;
+    padding:0px 0px 0px 10px;
+}
+
+/* ======================================================== HERO SECTION */
+
+main .hero{
+    width:100%;
+    height:60vh;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* position:relative;
+    top:100px;
+    margin-bottom:100px; */
+}
+
+main .hero .hero-content{
+    width:80%;
+    height: 100%;
+    background-color: var(--accent-color);
+    border-radius:30px;
+    box-shadow: 0px 0px 10px var(--accent-color);
+    overflow: hidden;
+    display: flex;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-text{
+    width:450px;
+    height:200px;
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.hero-text h1{
+    font-size: 3rem;
+    color:var(--secondary-color);
+}
+
+.hero-content .hero-img{
+    width:400px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    /* background-color: yellow; */
+}
+
+.hero .hero-img img{
+    width:120%;
+    height:120%;
+}
+
+.hero .shop-now-btn{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    width:150px;
+    padding:10px 0px;
+    border-radius: 30px;
+    border:none;
+    text-decoration: none;
+    color:var(--primary-color);
+    transition:all 0.1s ease-in-out;
+}
+
+.hero .shop-now-btn:hover{
+    background-color: var(--primary-color);
+    color:var(--secondary-color)
+}
+
+/* ======================================================== PRODUCTS SECTION */
+main .products-section{
+    padding:70px 0px;
+    width: 100%;
+    /* height:200px; */
+    /* background-color: yellow; */
+    margin:0 auto;
+}
+
+main .products-section .product-collection{
+    width:90%;
+    padding:10px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    /* gap: 1.5rem; */
+}
+
+.products-section .section-title{
+    padding:20px;
+    width:fit-content;
+    margin-left:5%;
+}
+
+.product-collection .product-card{
+    position:relative;
+    width:250px;
+    height:350px;
+    background-color: #fff;
+    padding:15px;
+    border-radius:20px;
+    text-decoration: none;
+    color:var(--primary-color);
+
+    display:grid;
+    gap:10px;
+    transition: all 0.2s ease-in;
+    z-index:10;
+}
+
+.product-card::before{
+    content:'';
+    position: absolute;
+    width:0px;
+    height:0px;
+    top:0;
+    left:50%;
+    background-color: transparent;
+    border:1px solid var(--accent-color);
+    border-radius:inherit;
+    transition: all 0.1s ease-in-out;
+    z-index:-1;
+}
+
+.product-card:hover::before{
+    width:100%;
+    height:100%;
+    left:0;
+}
+
+.product-card .card-details{
+    width:100%;
+    display:grid;
+    gap:5px;
+    text-decoration: none;
+    color:var(--primary-color);
+}
+
+.product-card .card-details img{
+    height:100%;
+    width:100%;
+    background-color: #cdcdcd75;
+    padding:5px;
+    border-radius:10px;
+}
+
+.product-card .card-details .card-text{
+    padding:5px 0px;
+    display: grid;
+    gap:5px;    
+}
+
+.product-card .card-btns{
+    width:100%;
+    padding:10px 0px;
+}
+
+.product-card .card-btns a{
+    /* justify-content: center;
+    align-items: center; */
+    text-decoration: none;
+    color:var(--secondary-color);
+    padding:10px 15px;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    border:none;
+    font-size:12px;
+    transition:background-color 0.2s ease-in-out, color 0.3s ease-out;
+}
+
+.card-btns a:hover{
+    background-color: var(--secondary-color-shade1);
+    color:var(--primary-color);
+    box-shadow: 2px 2px 3px #ccc;
+}
+
+.products-section h2{
+    font-size: 2rem;
+    line-height: 4.5rem; 
+}
+
+/* ======================================================== NEW ARRIVALS SECTION */
+main .arrivals-section{
+    clip-path: polygon(0% 0%, 100% 8%, 100% 95%, 0% 100%);
+    background-color: var(--secondary-color-shade1);
+    margin-top:100px;
+    padding-bottom:100px;
+}
+
+/* ======================================================== TRENDING PRODUCTS SECTION */
+main .trending-section{
+    clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 95%);
+    background-color: var(--secondary-color-shade1);
+    /* margin-bottom: 100px; */
+    padding-bottom: 100px;
+}
+
+/* ======================================================== BRANDS SECTION */
+
+.product-brands{
+    width:100%;
+    height:150px;
+    padding:50px;
+    background: url(images/geneva_chain_watch_gold_black_face.png) var(--primary-color);
+    backdrop-filter: blur(50px);
+    transform: rotate(-2deg);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+    overflow:hidden;
+}
+
+.product-brands span{
+    color:var(--secondary-color);
+    padding:10px 15px;
+    font-size: 2.5rem;
+}
+
+.boxy{
+    width:500px;
+    height:300px;
+    background-color: var(--accent-color);
+    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
+}
+
+/* =============================================== SUBSCRIPTION SECTIOIN */
+main .subscribe-section {
+    width:100%;
+    /* background-color: red;    */
+    transform: rotate(2deg);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-section h2{
+    font-size:2.5rem;
+}
+
+.subscribe-section h2 span{
+    color:var(--accent-color);
+}
+
+.subscribe-section form{
+    /* background-color: red; */
+    padding:10px;
+}
+
+.subscribe-section form input{
+    width:300px;
+    height:50px;
+    border-radius:10px;
+    outline:0px;
+    border:1px solid var(--accent-color);
+    padding:0px 10px;
+    background-color: var(--secondary-color-shade1);
+}
+
+.subscribe-section form input:invalid{
+    border:1px solid red;
+}
+
+.subscribe-section form p{
+    color:red;
+    font-size:14px;
+    padding:5px;
+    display:none;
+    transition:all 0.4s ease-in;
+}
+.subscribe-section form input:invalid ~ p{
+    display:block;
+}
+
+.subscribe-section form button{
+    /* width:100px; */
+    padding:15px 15px;
+    border-radius:5px;
+    border:none;
+    cursor:pointer;
+    background-color: var(--accent-color);
+    transition:all 0.2s ease-in-out;
+}
+
+.subscribe-section form button:hover{
+    background-color: var(--primary-color);
+    color:var(--secondary-color);
+}
+/* =============================================== FOOTER SECTIOIN */
+
+footer{
+    width: 100%;
+    height: 250px;
+    clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%);
+    background-color: var(--primary-color);
+}
