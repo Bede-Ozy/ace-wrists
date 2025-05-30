@@ -20,6 +20,7 @@ html{
     --secondary-color:#F4EDE5;
     --accent-color:#D4AF37;
     --secondary-color-shade1:#d1c6b93b;
+    --main-font:"Manrope", sans-serif;
 
 }
 
@@ -85,6 +86,7 @@ body{
     background-color: var(--secondary-color);
     font-family: var(--main-font);
     overflow-x: hidden;
+    font-family: var(--main-font);
 }
 
 body::-webkit-scrollbar{
@@ -125,6 +127,7 @@ header{
 }
 
 .menu-toggle .close {
+    color:var(--secondary-color);
     display: none;
 }
 
@@ -336,7 +339,8 @@ main .products-section .product-collection{
 .product-collection .product-card{
     position:relative;
     width:250px;
-    height:360px;
+    max-height: 400px;
+    /* height:360px; */
     background-color: #fff;
     padding:15px;
     border-radius:20px;
@@ -387,6 +391,10 @@ main .products-section .product-collection{
     padding:5px 0px;
     display: grid;
     gap:5px;
+}
+
+.card-text .product-name{
+    font-size:0.9rem;
 }
 
 .product-card .card-btns{
@@ -617,7 +625,7 @@ footer > p{
     width:100%;
     text-align: center;
     padding:20px 0px;
-    color:var(--primary-color);
+    color:var(--secondary-color);
 }
 
 footer .footer-socials{
@@ -673,8 +681,31 @@ footer .footer-socials a:hover{
     }
 
     header nav ul {
+        height:50vh;
+        width:50vh;
         flex-direction: column;
         gap: 30px;
+        /* background-color: red; */
+    }
+
+    header nav ul .nav-item{
+        /* background-color: yellow; */
+        height:50px;
+        width:50%;
+    }
+
+    header nav ul .nav-item a{
+        height:100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        color:var(--secondary-color);
+        font-size:1.2rem;
+    }
+
+    a.nav-link:hover::before{
+        background-color: var(--secondary-color);
     }
 
     header .nav-actions {
@@ -682,6 +713,26 @@ footer .footer-socials a:hover{
         gap: 20px;
     }
 
+    header .nav-actions form{
+        height:20vh !important;
+        flex-direction: column;
+        justify-content: center !important;
+        align-items: center ;
+        gap:50px;
+        /* background-color: yellow; */
+    }
+
+    .nav-actions form input{
+        border-radius:10px;
+        height:50px;
+        width:150px;
+    }
+    .nav-actions form .subscribe-btn{
+        background-color: var(--accent-color);
+        border-radius:10px;
+        height:50px;
+        width:150px;
+    }
     .menu-toggle .close.show {
         display: inline;
     }
@@ -707,36 +758,6 @@ footer .footer-socials a:hover{
         max-width: 350px;
         height: auto;
     }
-
-    /* header nav{
-        position:absolute;
-        top:0;
-        left:0;
-        height:100vh;
-        width:100%;
-        background-color: var(--primary-color);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        color:white;
-    }
-
-    header nav ul{
-        height:50vh;
-        display: grid;
-        flex-direction: column;
-        color:white;
-        gap:10px;
-    }
-
-    header nav .nav-item{
-        width:100%;
-        height:100%;
-       transform: scale(2);
-        padding:10px;
-        background-color: red;
-    } */
 
     .subscribe-section h2, 
     .subscribe-section p{

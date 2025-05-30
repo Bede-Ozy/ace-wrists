@@ -49,8 +49,8 @@ console.log(productName);
  function orderNow(name, price, features) {
       const message = `Hello, I'm interested in ordering:\n\nProduct: ${name}\nPrice: ₦${price}`;
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        //   window.open(url, '_blank');
-        alert(`${message} \n\n ${url}`);
+          window.open(url, '_blank');
+        // alert(`${message} \n\n ${url}`);
     }
 
 // orderNow();
