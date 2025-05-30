@@ -16,26 +16,29 @@
     <div class="b4"></div> -->
     <header>
 
+        <div class="menu-toggle">
+            <span class="hamburger">&#9776;</span> <!-- ☰ -->
+            <span class="close">&times;</span> <!-- × -->
+        </div>
         <div class="logo">
             <a href="#">ACE<span>WRISTS</span> </a>
         </div>
 
         <nav>
             <ul>
-                <li class="nav-item"><a href="#" class="nav-link">Men</a></li>
-                <li class="nav-item"><a href="#" class="nav-link">Women</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
                 <li class="nav-item"><a href="#pre-order" class="nav-link">Pre-order</a></li>
                 <li class="nav-item"><a href="#trending-section" class="nav-link">Trending</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <form action="search-result.html" method="post" id="nav-form">
+                    <input type="search" name="search" id="search-input" placeholder="search">
+                    <button class="subscribe-btn">search</button>
+                </form>
+            </div>
         </nav>
-
-        <div class="nav-actions">
-            <form action="search-result.html">
-                <input type="search" name="search" id="search-input" placeholder="search">
-                <button class="subscribe-btn">Subscribe</button>
-            </form>
-        </div>
-
     </header>
 
     <main>
@@ -168,22 +171,25 @@
             </div>
         </section>
 
-        <!-- <section class="product-brands">
+        <div class="brands-section">
+            <h2>Our Unique brands</h2>
+            <div class="marquee-slide">
+                <marquee class="product-brands" behavior="smooth" direction="left">
+                    <span>Geneva</span> 
+                    <span>Menage</span>
+                    <span>Geneva</span> 
+                    <span>Menage</span>
+                    <span>Geneva</span> 
+                    <span>Menage</span>
+                    <span>Geneva</span> 
+                    <span>Menage</span>
+                    <span>Geneva</span> 
+                    <span>Menage</span>
+                </marquee>
+            </div>
             
-        </section> -->
-
-        <marquee class="product-brands" behavior="smooth" direction="left">
-            <span>Geneva</span> 
-            <span>Menage</span>
-            <span>Geneva</span> 
-            <span>Menage</span>
-            <span>Geneva</span> 
-            <span>Menage</span>
-            <span>Geneva</span> 
-            <span>Menage</span>
-            <span>Geneva</span> 
-            <span>Menage</span>
-        </marquee>
+        </div>
+        
 
         <section class="products-section pre-order-section" id="pre-order">
             <div class="section-title">
@@ -196,12 +202,12 @@
                     <a href="#" class="card-details">
                         <img src="images/geneva_chain_watch_gold_black_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Geneva Gold chain watch </h4>
+                            <p class="product-price">₦ 19,500</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva timeless chain watch', 19500)">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -209,12 +215,12 @@
                     <a href="#" class="card-details">
                         <img src="images/geneva_chain_watch_silver_black_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Geneva Silver chain watch</h4>
+                            <p class="product-price">₦ 20,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva Silver timeless chain watchKTEVI classic leather strap watch', 20000)">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -222,12 +228,12 @@
                     <a href="#" class="card-details">
                         <img src="images/ktevi_leather-watch_brown.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">KTEVI classic leather watch</h4>
+                            <p class="product-price">₦ 26,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('KTEVI classic leather strap watch', 26000, 'tight first-grade Leather, quartz screen')">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -235,12 +241,12 @@
                     <a href="#" class="card-details">
                         <img src="images/O1CN01T6mFyL1WwimnNf8Ak_!!2208132322853-0-cib (1).jpg" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">wokAi brown leather watch</h4>
+                            <p class="product-price">₦21,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('wokAi brown leather watch', 15000)">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -248,12 +254,12 @@
                     <a href="#" class="card-details">
                         <img src="images/slim_chain_watch_black_gold_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Ace Glow black-chain classic</h4>
+                            <p class="product-price">₦25,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('Ace Glow chain classic', 21000)">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -261,8 +267,8 @@
                     <a href="#" class="card-details">
                         <img src="images/geneva_chain_watch_gold_black_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Geneva Gold chain watch</h4>
+                            <p class="product-price">₦20,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
@@ -274,8 +280,8 @@
                     <a href="#" class="card-details">
                         <img src="images/slim_chain_watch_gold_strap_black_gold_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Ace Glow gold-chain classic</h4>
+                            <p class="product-price">₦27,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
@@ -287,12 +293,12 @@
                     <a href="#" class="card-details">
                         <img src="images/geneva_chain_watch_silver_black_face.png" alt="">
                         <div class="card-text">
-                            <h4 class="product-name">Product Name</h4>
-                            <p class="product-price">$0.00</p>
+                            <h4 class="product-name">Geneva Silver chain watch</h4>
+                            <p class="product-price">₦ 20,000</p>
                         </div>
                     </a>
                     <div class="card-btns">
-                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva Silver chain watch', 20000)">Order Now</a>
                         <a href="#" class="add-to-cart-btn">Add to cart</a>
                     </div>
                 </div>
@@ -300,13 +306,13 @@
             </div>
         </section>
 
-        <section class="products-section trending-section" id="trending-section">
+        <section class="products-section trending-section" id="trend-section">
             <div class="section-title">
                 <h2>Join the Early Trends of our Acers</h2>
                 <p>See what our ace customers have bought the most out of our rich timeless collections</p>
             </div>
             
-            <div class="product-collection">
+            <!-- <div class="product-collection">
                 <div class="product-card">
                     <a href="#" class="card-details">
                         <img src="images/O1CN01T6mFyL1WwimnNf8Ak_!!2208132322853-0-cib (1).jpg" alt="">
@@ -412,12 +418,13 @@
                     </div>
                 </div>
         
-            </div>
+            </div> -->
         </section>
 
         <section class="subscribe-section" id="subscribe">
             <h2>Become an Acer <span>(40% discount)</span></h2>
-            <form action="subscribe.html" method="post">
+            <p>Our Ace Customers enjoy up to 20% discount on any pre-order</p>
+            <form action="subscribe.html" method="post" id="subscribe-form">
                 <input type="email" placeholder="your best email">
                 <button type="submit">Subscribe</button>
                 <p>Please enter a valid email to enjoy the ace discount</p>
@@ -429,10 +436,26 @@
     </main>
 
     <footer>
-        
+        <div class="logo">
+            <a href="#">ACE<span>WRISTS</span> </a>
+        </div>
+        <div class="footer-links">
+            
+                <a href="#">Shop Now</a>
+                <a href="#">Trending Products</a>
+          
+           
+                <a href="#">Place bulk order</a>
+                <a href="#">Chat With AceWrist</a>
+          
+        </div>
+         <div class="footer-socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            </div>
+        <p>&copy; 2025 AceWrists Timeless Watches. All rights reserved.</p>
     </footer>
-    
-
 
     <script src="app.js"></script>
 </body>

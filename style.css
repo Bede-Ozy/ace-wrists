@@ -84,6 +84,19 @@ html{
 body{
     background-color: var(--secondary-color);
     font-family: var(--main-font);
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    width:5px;
+    height:100px;
+    background-color: var(--secondary-color);
+    border:0.5px solid var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+    border-radius: 10px;
 }
 
 main{
@@ -100,6 +113,21 @@ header{
     align-items: center;
 }
 
+.menu-toggle {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.menu-toggle .close {
+    display: none;
+}
+
 header .logo{
     width:200px;
     height:50px;
@@ -111,6 +139,13 @@ header .logo{
     
 }
 
+header nav{
+    width:800px;
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-content: space-between;
+}
 .logo a{
     font-weight:bold;
     text-decoration: none;
@@ -160,11 +195,10 @@ header nav .nav-link:hover::before{
     left:0;
 }
 
-header .nav-actions{
+.nav-actions #nav-form{
     height:100%;
-    /* background-color: red; */
     display: flex;
-    gap:20px;
+    gap:10px;
     justify-content: end;
     align-items: center;
 }
@@ -175,7 +209,7 @@ header .nav-actions .subscribe-btn{
     padding:5px 10px;
     background-color: var(--primary-color);
     color:var(--secondary-color);
-    border-radius:10px;
+    border-radius:0px 10px 10px 0px ;
     border:none;
     cursor:pointer;
     transition: all 0.2s ease-in;
@@ -191,7 +225,7 @@ header .nav-actions input{
     height:30px;
     outline:0;
     border:none;
-    border-radius:10px;
+    border-radius:10px 0px 0px 10px ;
     padding:0px 0px 0px 10px;
 }
 
@@ -218,6 +252,7 @@ main .hero .hero-content{
     box-shadow: 0px 0px 10px var(--accent-color);
     overflow: hidden;
     display: flex;
+    flex-wrap:wrap ;
     gap:10px;
     justify-content: center;
     align-items: center;
@@ -272,7 +307,7 @@ main .hero .hero-content{
 
 /* ======================================================== PRODUCTS SECTION */
 main .products-section{
-    padding:70px 0px;
+    padding:50px 0px;
     width: 100%;
     /* height:200px; */
     /* background-color: yellow; */
@@ -283,8 +318,10 @@ main .products-section .product-collection{
     width:90%;
     padding:10px;
     margin:0 auto;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
+   display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap:20px;
     /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
     /* gap: 1.5rem; */
@@ -299,15 +336,13 @@ main .products-section .product-collection{
 .product-collection .product-card{
     position:relative;
     width:250px;
-    height:350px;
+    height:360px;
     background-color: #fff;
     padding:15px;
     border-radius:20px;
     text-decoration: none;
     color:var(--primary-color);
-
     display:grid;
-    gap:10px;
     transition: all 0.2s ease-in;
     z-index:10;
 }
@@ -341,7 +376,7 @@ main .products-section .product-collection{
 }
 
 .product-card .card-details img{
-    height:100%;
+    height:95%;
     width:100%;
     background-color: #cdcdcd75;
     padding:5px;
@@ -351,7 +386,7 @@ main .products-section .product-collection{
 .product-card .card-details .card-text{
     padding:5px 0px;
     display: grid;
-    gap:5px;    
+    gap:5px;
 }
 
 .product-card .card-btns{
@@ -376,16 +411,18 @@ main .products-section .product-collection{
     background-color: var(--secondary-color-shade1);
     color:var(--primary-color);
     box-shadow: 2px 2px 3px #ccc;
+    border:1px solid var(--primary-color);
 }
 
 .products-section h2{
     font-size: 2rem;
     line-height: 4.5rem; 
+    color:var(--accent-color);
 }
 
 /* ======================================================== NEW ARRIVALS SECTION */
 main .arrivals-section{
-    clip-path: polygon(0% 0%, 100% 8%, 100% 95%, 0% 100%);
+    /* clip-path: polygon(0% 0%, 100% 8%, 100% 95%, 0% 100%); */
     background-color: var(--secondary-color-shade1);
     margin-top:100px;
     padding-bottom:100px;
@@ -393,26 +430,72 @@ main .arrivals-section{
 
 /* ======================================================== TRENDING PRODUCTS SECTION */
 main .trending-section{
-    clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 95%);
+    /* clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%); */
     background-color: var(--secondary-color-shade1);
     /* margin-bottom: 100px; */
     padding-bottom: 100px;
 }
 
-/* ======================================================== BRANDS SECTION */
+.trending-section .product-collection{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:0px;
+}
 
-.product-brands{
-    width:100%;
-    height:150px;
-    padding:50px;
+/* .product-collection .product-card{
+    transform: scale(0.8); */
+    /* flex-basis: 20rem;
+
+} */
+.boxy{
+    width:500px;
+    height:300px;
+    background-color: red;
+}
+/* ======================================================== BRANDS SECTION */
+.brands-section{
+    width:100vw;
+    height:300px;
+    /* padding:20px 0px 0px ; */
+
+    /* background-color: red; */
+}
+.marquee-slide{
+    
     background: url(images/geneva_chain_watch_gold_black_face.png) var(--primary-color);
-    backdrop-filter: blur(50px);
-    transform: rotate(-2deg);
+    background-size: 400px;
+    background-position:right;
+    background-repeat: no-repeat;
+    /* clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%); */
+
+}
+
+.brands-section h2{
+    color:var(--primary-color);
+    /* backdrop-filter: blur(5px); */
+    font-size: 2rem;
+    text-align: center;
+    line-height: 100px;
+
+}
+.product-brands{
+    height: 100%;
+    padding:50px;
+    backdrop-filter: blur(5px);
     display:flex;
     align-items: center;
     justify-content: center;
     gap:15px;
     overflow:hidden;
+
+}
+
+.product-brands .brand-slide{
+    background-color: var(--primary-color);
+    height:100%;
+    width:100vw;
 }
 
 .product-brands span{
@@ -421,19 +504,12 @@ main .trending-section{
     font-size: 2.5rem;
 }
 
-.boxy{
-    width:500px;
-    height:300px;
-    background-color: var(--accent-color);
-    clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
-}
-
 /* =============================================== SUBSCRIPTION SECTIOIN */
 main .subscribe-section {
+    padding:50px 0px;
     width:100%;
-    /* background-color: red;    */
-    transform: rotate(2deg);
     display:flex;
+    gap:10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -447,12 +523,12 @@ main .subscribe-section {
     color:var(--accent-color);
 }
 
-.subscribe-section form{
+.subscribe-section #subscribe-form{
     /* background-color: red; */
     padding:10px;
 }
 
-.subscribe-section form input{
+.subscribe-section #subscribe-form input{
     width:300px;
     height:50px;
     border-radius:10px;
@@ -462,22 +538,22 @@ main .subscribe-section {
     background-color: var(--secondary-color-shade1);
 }
 
-.subscribe-section form input:invalid{
+.subscribe-section #subscribe-form input:invalid{
     border:1px solid red;
 }
 
-.subscribe-section form p{
+.subscribe-section #subscribe-form p{
     color:red;
     font-size:14px;
     padding:5px;
     display:none;
     transition:all 0.4s ease-in;
 }
-.subscribe-section form input:invalid ~ p{
+.subscribe-section #subscribe-form input:invalid ~ p{
     display:block;
 }
 
-.subscribe-section form button{
+.subscribe-section #subscribe-form button{
     /* width:100px; */
     padding:15px 15px;
     border-radius:5px;
@@ -487,7 +563,7 @@ main .subscribe-section {
     transition:all 0.2s ease-in-out;
 }
 
-.subscribe-section form button:hover{
+.subscribe-section #subscribe-form button:hover{
     background-color: var(--primary-color);
     color:var(--secondary-color);
 }
@@ -495,7 +571,196 @@ main .subscribe-section {
 
 footer{
     width: 100%;
-    height: 250px;
-    clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%);
+    /* height:200px; */
+    /* clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 100%); */
     background-color: var(--primary-color);
+    padding:20px 0px 0px 0px;
+    display:flex;
+    gap:10px;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+}
+footer .logo{
+    width:100%;
+    border-bottom:1px solid var(--secondary-color-shade1);
+    text-align: center;
+    padding:10px;
+}
+footer .logo a{
+    font-size: 3rem;
+    color:var(--secondary-color);
+}
+
+footer .footer-links{
+    width:70%;
+    height:calc(100% - 20px - 20px);
+    display:flex;
+    align-items:end;
+    justify-content: center;
+    gap:20px;
+    padding:20px 0px;
+}
+
+.footer-links a{
+    height:30px;
+    color:var(--secondary-color);
+    text-decoration: none;
+    transition:all 0.2s ease-in;
+    background-color: var(--secondary-color-shade1);
+    padding:5px 15px;
+    border-radius: 30px;
+}
+
+footer > p{
+    background-color: var(--accent-color);
+    width:100%;
+    text-align: center;
+    padding:20px 0px;
+    color:var(--primary-color);
+}
+
+footer .footer-socials{
+    display:flex;
+    gap:20px;
+}
+
+footer .footer-socials a{
+    text-decoration: none;
+    color:var(--secondary-color);
+}
+footer .footer-links a:hover{
+    background-color: var(--secondary-color);
+    color:var(--primary-color)
+}
+footer .footer-socials a:hover{
+    color:var(--accent-color);
+    text-decoration: underline;
+}
+
+@media (max-width:450px) {
+    
+    header{
+        position:relative;
+    }
+    header .logo{
+        width:100%;
+        /* background-color: red; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+        z-index: 998;
+    }
+
+    header nav.open {
+        right: 0;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    header .nav-actions {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu-toggle .close.show {
+        display: inline;
+    }
+
+    .menu-toggle .hamburger.hide {
+        display: none;
+    }
+
+    .hero .hero-text{
+        text-align: center;
+        width:80%;
+        justify-content: center;
+        align-items: center;
+        gap:20px;
+    }
+
+    .hero .hero-text h1{
+        font-size: 2rem;
+    }
+
+    .hero .hero-img{
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    /* header nav{
+        position:absolute;
+        top:0;
+        left:0;
+        height:100vh;
+        width:100%;
+        background-color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color:white;
+    }
+
+    header nav ul{
+        height:50vh;
+        display: grid;
+        flex-direction: column;
+        color:white;
+        gap:10px;
+    }
+
+    header nav .nav-item{
+        width:100%;
+        height:100%;
+       transform: scale(2);
+        padding:10px;
+        background-color: red;
+    } */
+
+    .subscribe-section h2, 
+    .subscribe-section p{
+        width:80%;
+        text-align: center;
+    }
+
+    .subscribe-section form{
+        display:grid;
+        gap:10px;
+    }
+
+    footer .footer-links{
+        display: grid;
+        padding:20px 0px;
+    }
+
+    footer .footer-links a{
+        text-align: center;
+    }
+
+    .trending-section{
+        background-color: red;
+    }
+
+
 }
