@@ -647,7 +647,11 @@ footer .footer-socials a:hover{
 }
 
 @media (max-width:450px) {
-    
+    .section-title p,
+    .section-title h2{
+        width:100%;
+        text-align:center;
+    }
     header{
         position:relative;
     }
