@@ -48,7 +48,7 @@ section.hero{
     border-radius: 20px;
     transition: all 0.2s ease-in-out;
     /* background:linear-gradient(to bottom left, green yellow); */
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), #86a8e7, #7f7fd5);
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), gold, #f5f5f5);
     background-size: 300% 300%;
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -4,7 +4,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const productCard = document.querySelectorAll(".product-card");
     const navSubscribeBtn = document.querySelector(".subscribe-btn");
     const navSearchInput = document.querySelector("#search-input");
+    // const products = document.querySelectorAll(".product-card");
+    // const productsDetails = document.querySelectorAll(".card-details");
+    // const orderButton = document.querySelectorAll(".order-btn");
+    // const productName = document.querySelectorAll(".product-name");
+    const hamburger = document.querySelector('.hamburger');
+    const closeIcon = document.querySelector('.close');
+    const nav = document.querySelector('header nav');
 
+
+    hamburger.addEventListener('click', () => {
+        nav.classList.add('open');
+        hamburger.classList.add('hide');
+        closeIcon.classList.add('show');
+    });
+
+    closeIcon.addEventListener('click', () => {
+    nav.classList.remove('open');
+    hamburger.classList.remove('hide');
+    closeIcon.classList.remove('show');
+    });
     function searchProduct(searchPhrase){
         productCard.forEach(item => {
         const itemData = [item.dataset.color, item.dataset.brand];
@@ -22,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         searchPhrase = navSearchInput.value;
         console.log(searchPhrase);
         searchProduct(searchPhrase);
-    })
+    });
+    
 
     
 
@@ -92,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const heroElement = document.querySelector('.hero');
     // const heroText = document.querySelector('hero-text');
 
-    const images = ['../images/geneva_chain_watch_gold_black_face.png', '../images/gshock.jpg', '../images/invicta.jpg', '../images/CASIO.jpg', '../images/geneva_chain_watch_silver_black_face.png'];
+    const images = ['../images/geneva_chain_watch_gold_black_face.png', '../images/gshock.jpg', '../images/invicta.jpg', '../images/CASIO.png', '../images/geneva_chain_watch_silver_black_face.png'];
     // const heroTextList = ['Shop affordable & timeless wrist watches from classic brands.', 'Turn Your outfit into a dazzle.', 'Look better with a fancy wrist', 'Ace up your outfit']
     let currentImageIndex = 0;
 
@@ -101,8 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
         currentImageIndex = (currentImageIndex + 1) % images.length;
     }, 5000);
 
-
 });
+
+ function orderNow(name, price, features) {
+        const phone = '+2349033391891';
+        const message = `Hello, I'm interested in ordering:\n\nProduct: ${name}\nPrice: ₦${price}`;
+        const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
+        // alert(`${message} \n\n ${url}`);
+    }
 
 
 
