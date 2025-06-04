@@ -1,0 +1,191 @@
+*{
+    margin:0 ;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: red; */
+    background-color: var(--secondary-color);
+    font-family: var(--main-font);
+}
+
+/* ========================================================== Hero Section */
+
+section.hero{
+    width:90%;
+    margin:0 auto;
+    height:70vh;
+    background-color: var(--accent-color);
+    /* background: url(../images/geneva_chain_watch_silver_black_face.png); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50vw;
+    border-radius:30px;
+    padding:10px;
+    display:flex;
+    align-items: center;
+}
+
+.hero .hero-text{
+    width:50%;
+    font-size:3rem;
+    /* background-color: red; */
+    margin-left:150px;
+    padding:15px;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hero-text span{
+    display:block;
+    padding:10px;
+    width:fit-content;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    /* background:linear-gradient(to bottom left, green yellow); */
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), #86a8e7, #7f7fd5);
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s infinite alternate ease-in-out;
+}
+
+
+
+section.products-collection{
+    width:90%;
+    padding:10px;
+    margin:0 auto;
+    display:flex;
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    justify-content: center;
+    gap:20px;
+}
+
+.products > *{
+    width:200px;
+    height:200px;
+}
+
+/* .blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: greenyellow;
+} */
+
+/* ============================================================== product collection */
+
+@keyframes cardAnimation {
+    0%{
+        transform:scale(0.5);
+    }
+    50%{transform: scale(0.8);}
+    100%{transform: scale(0.8);}
+}
+.products{
+    width:80%;
+    /* background-color: red; */
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+    /* gap:20px; */
+}
+
+.products .product-card{
+    position:relative;
+    width:250px;
+    max-height: 400px;
+    height:360px;
+    background-color: #fff;
+    padding:15px;
+    border-radius:20px;
+    text-decoration: none;
+    color:var(--primary-color);
+    display:grid;
+    transition: all 0.2s ease-in;
+    z-index:10;
+    transform: scale(0.9);
+    animation: cardAnimation 0.2s ease-in-out;
+}
+
+
+/* ======================================================== FILTER SECTION */
+.left-filters{
+    width:20%;
+    /* height:100%; */
+    /* background-color: red; */
+}
+
+.filter-group{
+    width:200px;
+    padding:10px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    /* display:grid;
+    gap:10px; */
+}
+
+.filter{
+    margin:30px 0px;
+    display:flex;
+    gap:5px;
+    flex-direction: column;
+}
+
+.filter > *{
+    color:var(--secondary-color)
+}
+
+
+@media (max-width:450px) {
+    .products-collection {
+        /* background-color: red; */
+        flex-direction: column;
+    }
+
+    .products-collection > * {
+        width:100%;
+    }
+
+    .products-collection .left-filters{
+        /* background-color: green; */
+        
+    }
+
+    .left-filters .filter-group{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .filter-group .filter{
+        width:45%;
+        padding:10px;
+        background-color: var(--primary-color);
+        border-radius:10px;
+    }
+
+    .filter > * {
+        color:var(--secondary-color);
+    }
+
+    .filter h4{
+        /* background-color: var(--secondary-color); */
+        padding:5px 2px;
+    }
+
+    .products-collection .products{
+        /* background-color: yellow; */
+    }
+}

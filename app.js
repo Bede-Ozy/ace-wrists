@@ -11,8 +11,9 @@ const products = document.querySelectorAll(".product-card");
 const productsDetails = document.querySelectorAll(".card-details");
 const orderButton = document.querySelectorAll(".order-btn");
 const productName = document.querySelectorAll(".product-name");
-
-
+const subscribeButton = document.getElementById("subscrib-btn");
+const emailInput = document.getElementById("email-input");
+const emailInputWarning = document.getElementById("email-input-warning");
 
 hamburger.addEventListener('click', () => {
     nav.classList.add('open');
@@ -26,31 +27,19 @@ closeIcon.addEventListener('click', () => {
     closeIcon.classList.remove('show');
 });
 
-// console.log(allLinks);
-// console.log(products);
-// console.log(productsDetails);
+subscribeButton.addEventListener('click', (e) => {
+    if (emailInput.value === "") {
+        e.preventDefault();
+        alert("Please enter an email");
+        // emailInputWarning.style.display('block');
+    }
+})
 console.log(productName);
-
-// orderButton.forEach(a =>{
-//         const nameOfProduct = productName.textContent;
-//     a.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         console.log(productName.textContent); 
-//         console.log(nameOfProduct);
-//     })
-// })
-
-// Array.from(allLinks).forEach(a => {
-//     a.addEventListener('click', (e) => {
-//         e.preventDefault();
-//     })
-// });
 
  function orderNow(name, price, features) {
       const message = `Hello, I'm interested in ordering:\n\nProduct: ${name}\nPrice: ₦${price}`;
       const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
           window.open(url, '_blank');
         // alert(`${message} \n\n ${url}`);
-    }
-
+}
 // orderNow();

@@ -1,26 +1,9 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding:0;
-}
-
-html{
-    scroll-behavior: smooth;
-}
-
 :root {
     --primary-color:#1C4532;
     --secondary-color:#F4EDE5;
     --accent-color:#D4AF37;
     --secondary-color-shade1:#d1c6b93b;
     --main-font:"Manrope", sans-serif;
-}
-
-body{
-    background-color: var(--secondary-color);
-    font-family: var(--main-font);
-    overflow-x: hidden;
-    font-family: var(--main-font);
 }
 
 body::-webkit-scrollbar{
@@ -35,11 +18,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 10px;
 }
 
-main{
-    width:100%;
-}
-
-/* ======================================================== HEADER SECTION */
+/* ================================================================ HEADER AND NAV */
 header{
     width:100%;
     height:100px;
@@ -166,111 +145,9 @@ header .nav-actions input{
     padding:0px 0px 0px 10px;
 }
 
-/* ======================================================== HERO SECTION */
+/* =============================================== PRODUCT COLLECTION */
 
-main .hero{
-    width:100%;
-    height:60vh;
-    /* background-color: red; */
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* position:relative;
-    top:100px;
-    margin-bottom:100px; */
-}
-
-main .hero .hero-content{
-    width:80%;
-    height: 100%;
-    background-color: var(--accent-color);
-    border-radius:30px;
-    box-shadow: 0px 0px 10px var(--accent-color);
-    overflow: hidden;
-    display: flex;
-    flex-wrap:wrap ;
-    gap:10px;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero .hero-text{
-    width:450px;
-    height:200px;
-    display: flex;
-    gap:10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-}
-
-.hero-text h1{
-    font-size: 3rem;
-    color:var(--secondary-color);
-}
-
-.hero-content .hero-img{
-    width:400px;
-    height:400px;
-    display: flex;
-    justify-content: center;
-    /* background-color: yellow; */
-}
-
-.hero .hero-img img{
-    width:120%;
-    height:120%;
-}
-
-.hero .shop-now-btn{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--secondary-color);
-    width:150px;
-    padding:10px 0px;
-    border-radius: 30px;
-    border:none;
-    text-decoration: none;
-    color:var(--primary-color);
-    transition:all 0.1s ease-in-out;
-}
-
-.hero .shop-now-btn:hover{
-    background-color: var(--primary-color);
-    color:var(--secondary-color)
-}
-
-/* ======================================================== PRODUCTS SECTION */
-main .products-section{
-    padding:50px 0px;
-    width: 100%;
-    /* height:200px; */
-    /* background-color: yellow; */
-    margin:0 auto;
-}
-
-main .products-section .product-collection{
-    width:90%;
-    padding:10px;
-    margin:0 auto;
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap:20px;
-    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
-    /* gap: 1.5rem; */
-}
-
-.products-section .section-title{
-    padding:20px;
-    width:fit-content;
-    margin-left:5%;
-}
-
-.product-collection .product-card{
+.products .product-card{
     position:relative;
     width:250px;
     max-height: 400px;
@@ -322,7 +199,7 @@ main .products-section .product-collection{
 }
 
 .product-card .card-details:hover img{
-    transform: rotate(5deg) scale(1.2);
+    transform: rotate(5deg) scale(1.25);
 }
 
 .product-card .card-details .card-text{
@@ -361,156 +238,6 @@ main .products-section .product-collection{
     border:1px solid var(--primary-color);
 }
 
-.products-section h2{
-    font-size: 2rem;
-    line-height: 4.5rem; 
-    color:var(--accent-color);
-}
-
-/* ======================================================== NEW ARRIVALS SECTION */
-main .arrivals-section{
-    /* clip-path: polygon(0% 0%, 100% 8%, 100% 95%, 0% 100%); */
-    background-color: var(--secondary-color-shade1);
-    margin-top:100px;
-    padding-bottom:100px;
-}
-
-/* ======================================================== TRENDING PRODUCTS SECTION */
-main .trending-section{
-    /* clip-path: polygon(0% 0%, 100% 15%, 100% 100%, 0% 85%); */
-    background-color: var(--secondary-color-shade1);
-    /* margin-bottom: 100px; */
-    padding-bottom: 100px;
-}
-
-.trending-section .product-collection{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap:0px;
-}
-
-/* .product-collection .product-card{
-    transform: scale(0.8); */
-    /* flex-basis: 20rem;
-
-} */
-
-/* ======================================================== BRANDS SECTION */
-.brands-section{
-    width:100vw;
-    height:300px;
-    /* padding:20px 0px 0px ; */
-
-    /* background-color: red; */
-}
-.marquee-slide{
-    
-    background: url(images/geneva_chain_watch_gold_black_face.png) var(--primary-color);
-    background-size: 400px;
-    background-position:right;
-    background-repeat: no-repeat;
-    /* clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%); */
-
-}
-
-.brands-section h2{
-    color:var(--primary-color);
-    /* backdrop-filter: blur(5px); */
-    font-size: 2rem;
-    text-align: center;
-    line-height: 100px;
-
-}
-.product-brands{
-    height: 100%;
-    padding:50px;
-    backdrop-filter: blur(5px);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    gap:15px;
-    overflow:hidden;
-
-}
-
-.product-brands .brand-slide{
-    background-color: var(--primary-color);
-    height:100%;
-    width:100vw;
-}
-
-.product-brands span{
-    color:var(--secondary-color);
-    padding:10px 15px;
-    font-size: 2.5rem;
-}
-
-/* =============================================== SUBSCRIPTION SECTIOIN */
-main .subscribe-section {
-    padding:50px 0px;
-    width:100%;
-    display:flex;
-    gap:10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.subscribe-section h2{
-    font-size:2.5rem;
-}
-
-.subscribe-section h2 span{
-    color:var(--accent-color);
-}
-
-.subscribe-section #subscribe-form{
-    /* background-color: red; */
-    padding:10px;
-}
-
-.subscribe-section #subscribe-form input{
-    width:300px;
-    height:50px;
-    border-radius:10px;
-    outline:0px;
-    border:1px solid var(--accent-color);
-    padding:0px 10px;
-    background-color: var(--secondary-color-shade1);
-}
-
-.subscribe-section #subscribe-form input:invalid{
-    border:1px solid red;
-}
-
-.subscribe-section #subscribe-form p{
-    color:red;
-    font-size:12px;
-    opacity:0;
-    transition:opacity 0.4s ease-in;
-    width:100%;
-    padding:5px;
-}
-.subscribe-section #subscribe-form input:invalid ~ p{
-    opacity:1;
-}
-
-.subscribe-section #subscribe-form button{
-    width:300px;
-    padding:15px 15px;
-    border-radius:5px;
-    border:none;
-    cursor:pointer;
-    background-color: var(--accent-color);
-    transition:all 0.2s ease-in-out;
-}
-
-.subscribe-section #subscribe-form button:hover{
-    background-color: var(--primary-color);
-    color:var(--secondary-color);
-}
 
 /* =============================================== FOOTER SECTIOIN */
 
@@ -584,14 +311,8 @@ footer .footer-socials a:hover{
 }
 
 
-/* ====================================================== MOBILE RESPONSIVE STYLES  */
 
 @media (max-width:450px) {
-    .section-title p,
-    .section-title h2{
-        width:100%;
-        text-align:center;
-    }
     header{
         position:relative;
     }
@@ -685,44 +406,11 @@ footer .footer-socials a:hover{
         display: none;
     }
 
-    /* ================================================= HERO SECTION : MOBILE */
-
-    .hero .hero-text{
-        text-align: center;
-        width:80%;
-        justify-content: center;
-        align-items: center;
-        gap:20px;
-    }
-
-    .hero .hero-text h1{
-        font-size: 2rem;
-    }
-
-    .hero .hero-img{
-        width: 100%;
-        max-width: 350px;
-        height: auto;
-    }
-
-    /* ================================================= SUBSCRIBE SECTION : MOBILE */
-    .subscribe-section h2, 
-    .subscribe-section p{
-        width:80%;
-        text-align: center;
-    }
-
-    .subscribe-section p{
-        padding:0px !important;
-    }
-
-    .subscribe-section form{
-        display:grid;
-        gap:10px;
-    }
+    /* ================================================== PRODUCT COLLECTION */
 
 
-    /* ================================================= FOOTER SECTION : MOBILE */
+
+     /* ================================================= FOOTER SECTION : MOBILE */
     footer .footer-links{
         display: grid;
         padding:20px 0px;
@@ -730,20 +418,6 @@ footer .footer-socials a:hover{
 
     footer .footer-links a{
         text-align: center;
-    }
-
-
-    .trending-section{
-        padding:0 !important;
-    }
-    .trending-section h2{
-        width:100%;
-        font-size: 1.5rem;
-        line-height: 3rem;
-    }
-    .trending-section p{
-        width:100%;
-        font-size: 1.5rem;
     }
 
 

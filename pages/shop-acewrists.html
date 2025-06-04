@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/brand.css">
+    <link rel="stylesheet" href="../css/shop.css">
+    <title>SHOP - AceWrists</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="menu-toggle">
+            <span class="hamburger">&#9776;</span> <!-- ☰ -->
+            <span class="close">&times;</span> <!-- × -->
+        </div>
+        <div class="logo">
+            <a href="#">ACE<span>WRISTS</span> </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="#pre-order" class="nav-link">Pre-order</a></li>
+                <li class="nav-item"><a href="#trending-section" class="nav-link">Trending</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- <form id="nav-form"> -->
+                    <input type="search" name="search" id="search-input" placeholder="search">
+                    <button class="subscribe-btn">search</button>
+                <!-- </form> -->
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1 class="hero-text">Shop <span>affordable & timeless</span> wrist watches from <span> classic brands.</span></h1>
+    </section>
+
+    <section class="products-collection">
+        <div class="left-filters">
+            <div class="filter-group">
+                <div class="filter">
+                    <!-- <input type="radio" name="brand" class="option-filter" value="gold"> 
+                    <label for="blue-filter">Gold</label><br />
+                    <input type="radio" name="brand" class="option-filter" value="geneva"> 
+                    <label for="green-filter">Geneva</label><br />
+                    <input type="radio" name="brand" class="option-filter" value="gshock"> 
+                    <label for="blue-filter">Gshock</label><br />
+                    <input type="radio" name="brand" class="option-filter" value="invicta"> 
+                    <label for="green-filter">invicta</label><br /> -->
+
+                    <h4>Filter by Color</h4>
+                    <label><input type="radio" name="color" class="color-filter" value="all"> All</label>
+                    <label><input type="radio" name="color" class="color-filter" value="gold"> Gold</label>
+                    <label><input type="radio" name="color" class="color-filter" value="black"> Black</label>
+                    <label><input type="radio" name="color" class="color-filter" value="silver"> Silver</label>
+                    <label><input type="radio" name="color" class="color-filter" value="brown"> brown</label>
+                </div>
+
+                <div class="filter">
+                    <!-- BRAND FILTER -->
+                    <h4>Filter by Brand</h4>
+                    <label><input type="radio" name="brand" class="brand-filter" value="all"> All</label>
+                    <label><input type="radio" name="brand" class="brand-filter" value="gshock"> Gshock</label>
+                    <label><input type="radio" name="brand" class="brand-filter" value="ktevi"> Ktevi</label>
+                    <label><input type="radio" name="brand" class="brand-filter" value="slim"> Slim</label>
+                    <label><input type="radio" name="brand" class="brand-filter" value="casio"> Casio</label>
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="products">
+            <div class="product-card" data-color="gold" data-brand="geneva">
+                    <a href="#" class="card-details">
+                        <img src="../images/geneva_chain_watch_gold_black_face.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Geneva Gold chain watch </h4>
+                            <p class="product-price">₦ 19,500</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva timeless chain watch', 19500)">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="silver" data-brand="geneva">
+                    <a href="#" class="card-details">
+                        <img src="../images/geneva_chain_watch_silver_black_face.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Geneva Silver chain watch</h4>
+                            <p class="product-price">₦ 20,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva Silver timeless chain watchKTEVI classic leather strap watch', 20000)">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="brown" data-brand="ktevi">
+                    <a href="#" class="card-details">
+                        <img src="../images/ktevi_leather-watch_brown.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">KTEVI classic leather watch</h4>
+                            <p class="product-price">₦ 26,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('KTEVI classic leather strap watch', 26000, 'tight first-grade Leather, quartz screen')">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="black" data-brand="gshock">
+                    <a href="#" class="card-details">
+                        <img src="../images/gshock.jpg" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">wokAi brown leather watch</h4>
+                            <p class="product-price">₦21,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('wokAi brown leather watch', 15000)">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="black" data-brand="slim">
+                    <a href="#" class="card-details">
+                        <img src="../images/slim_chain_watch_black_gold_face.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Ace Glow black-chain classic</h4>
+                            <p class="product-price">₦25,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('Ace Glow chain classic', 21000)">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="black" data-brand="casio">
+                    <a href="#" class="card-details">
+                        <img src="../images/CASIO.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Casio black classic</h4>
+                            <p class="product-price">₦20,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="gold" data-brand="slim">
+                    <a href="#" class="card-details">
+                        <img src="../images/slim_chain_watch_gold_strap_black_gold_face.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Ace Glow gold-chain classic</h4>
+                            <p class="product-price">₦27,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+            <div class="product-card" data-color="silver" data-brand="geneva">
+                    <a href="#" class="card-details">
+                        <img src="../images/geneva_chain_watch_silver_black_face.png" alt="">
+                        <div class="card-text">
+                            <h4 class="product-name">Geneva Silver chain watch</h4>
+                            <p class="product-price">₦ 20,000</p>
+                        </div>
+                    </a>
+                    <div class="card-btns">
+                        <a href="#" class="order-btn" onclick="orderNow('Geneva Silver chain watch', 20000)">Order Now</a>
+                        <a href="#" class="add-to-cart-btn">Add to cart</a>
+                    </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <footer>
+        <div class="logo">
+            <a href="#">ACE<span>WRISTS</span> </a>
+        </div>
+        <div class="footer-links">
+            
+                <a href="#">Shop Now</a>
+                <a href="#">Trending Products</a>
+          
+           
+                <a href="#">Place bulk order</a>
+                <a href="#">Chat With AceWrist</a>
+          
+        </div>
+         <div class="footer-socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+            </div>
+        <p>&copy; 2025 AceWrists Timeless Watches. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/shop.js"></script>
+</body>
+</html>
