@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(colorFilterOption);
     // console.log(colorFilterOption[1].value);
     // console.log(colorFilterOption[0].value);
+
     function colorFilterSelection () {
 
         colorFilterOption.forEach(input => {

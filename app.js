@@ -14,6 +14,7 @@ const productName = document.querySelectorAll(".product-name");
 const subscribeButton = document.getElementById("subscrib-btn");
 const emailInput = document.getElementById("email-input");
 const emailInputWarning = document.getElementById("email-input-warning");
+const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
 hamburger.addEventListener('click', () => {
     nav.classList.add('open');
@@ -42,4 +43,9 @@ console.log(productName);
           window.open(url, '_blank');
         // alert(`${message} \n\n ${url}`);
 }
+
+cart = [];
+console.log(addToCartBtn)
+
+// addToCart();
 // orderNow();

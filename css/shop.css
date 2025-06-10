@@ -148,6 +148,36 @@ section.products-collection{
 
 
 @media (max-width:450px) {
+
+    .hero {
+        flex-direction: column;
+        padding: 0px !important;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0vw !important;
+    }
+
+    .hero .hero-text{
+        width:80%;
+        font-size:2.2rem;
+        background-color: var(--primary-color-shade1);
+        margin-left:0px ;
+        backdrop-filter: blur(20px);
+        color:var(--secondary-color);
+        text-align: center;
+        border-radius:30px;
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        /* padding:15px; */
+    }
+    .hero-text > *{
+        text-align: center;
+    }
+
     .products-collection {
         /* background-color: red; */
         flex-direction: column;
